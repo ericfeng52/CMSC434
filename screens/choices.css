@@ -3,9 +3,20 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.content {
+    font-size: large;
+    background-color: lightpink;
+    padding-bottom: 25px;
+    padding-left: 15px;
+}
+
 nav {
     background-color: #333;
     text-align: center;
+}
+
+#choices_header {
+    margin-top: 0; 
 }
 
 .title-bar {
@@ -46,4 +57,14 @@ nav {
 /* Add a class for highlighting the active tab */
 .active-tab {
     background-color: #4CAF50;
+}
+
+
+/* Add styles for the text box */
+.text-box {
+    display: none; /* Initially hide the text box */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f4f4f4;
 }

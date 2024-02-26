@@ -8,6 +8,8 @@ body {
     background-color: lightpink;
     padding-bottom: 25px;
     padding-left: 15px;
+    height: calc(100vh - 50px); 
+    overflow-y: auto;
 }
 
 nav {

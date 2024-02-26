@@ -22,10 +22,33 @@
     </nav>
 
     <div class="content">
-        <!-- index.html serves as the first screen -->
-        <h1>Welcome to Page 2</h1>
-        <p>This is the second page content.</p>
+        <h1 id="choices_header">Choices</h1><br>
+        <!-- Add radio buttons -->
+        <form>
+            <label>Hat color to place on Player One's head:<br>
+                <input type="radio" name="playerOneColor" value="red"> Red
+            </label><br>
+            <label>
+                <input type="radio" name="playerOneColor" value="blue"> Blue
+            </label><br><br><br>
+
+            <label for="dropdown">Hat color to place on Player Two's head:</label><br>
+            <select id="dropdown" name="dropdown">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+        </form><br><br>
+
+            <button id="revealButton">Reveal Text</button>
+
+            <div class="text-box" id="textBox">
+                Have Computer Players Make Guesses<br> Exactly One Will Be Correct <br>
+                Player One's Color: <span id="playerOneColorDisplay"></span>
+            </div>
+
     </div>
+
+
 
     <script src="script.js"></script>
 </body>
