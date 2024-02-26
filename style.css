@@ -35,10 +35,11 @@ nav {
 }
 
 .content {
-    padding: 20px;
+    padding: 2rem;
+    margin-top: 1rem;
 }
 
-/* Add this if you want to push down the content to avoid overlapping with the title bar */
-.content {
-    margin-top: 50px; /* Adjust this value based on your title bar height */
+/* Add a class for highlighting the active tab */
+.active-tab {
+    background-color: #4CAF50;
 }
