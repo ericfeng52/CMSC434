@@ -1,1 +1,46 @@
-PROFILE
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <script>
+        function showNotification() {
+            var notification = document.getElementById("notification");
+            notification.style.display = "block";
+        }
+
+        function closeNotification() {
+            var notification = document.getElementById("notification");
+            notification.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="title-bar">
+            <li><a href="screens/index.html">Text</a></li>
+            <li><a href="screens/choices.html">Choices</a></li>
+            <li><a href="screens/todo.html">ToDo</a></li>
+            <li><a href="screens/profile.html">Profile</a></li>
+            <li><a href="screens/colors.html">Colors</a></li>
+            <li><a href="screens/lowerright.html">LowerRight</a></li>
+        </ul>         
+    </nav>
+
+    <div class="content">
+        <h1 id="profile_header">Profile</h1>
+        <div class="profile">
+            <img src="nerdemoji.jpeg" alt="Profile Picture" id="profile_picture" onclick="showNotification()">
+            <br>
+            <b id="name_label"> Mister Nerd </b>
+        </div>
+            
+        
+
+        <div id="notification" style="display: none;">
+            <p><b>Warning! </b> Do not click on the profile image</p>
+            <button onclick="closeNotification()">Close</button>
+        </div>
+    </div>
+</body>
+</html>

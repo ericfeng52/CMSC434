@@ -1,3 +1,37 @@
+.content {
+    font-size: large;
+    background-color: lightpink;
+    padding-bottom: 25px;
+    padding-left: 15px;
+}
+
+
+#todo_header {
+    text-align: left;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background-color: lightgrey;
+    width:fit-content
+}
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+.task .delete-button {
+    font-weight:100;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.task .delete-button:hover {
+    color: red;
+}
+.task.completed {
+    text-decoration: line-through;
+    background-color: darkgrey;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -32,18 +66,4 @@ nav {
 .title-bar li a:hover {
     background-color: #ddd;
     color: black;
-}
-
-.content {
-    padding: 20px;
-}
-
-.content {
-    padding: 2rem;
-    margin-top: 1rem;
-}
-
-/* Add a class for highlighting the active tab */
-.active-tab {
-    background-color: #4CAF50;
 }
