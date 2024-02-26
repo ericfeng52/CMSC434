@@ -3,11 +3,14 @@
     background-color: lightpink;
     padding-bottom: 25px;
     padding-left: 15px;
+    margin-top: 0rem;
+    padding-top: 0rem;
 }
 
 
 #todo_header {
     text-align: left;
+    margin-top: 0;
 }
 
 .task {
@@ -40,18 +43,18 @@ body {
 nav {
     background-color: #333;
     text-align: center;
+    margin: 0;
 }
 
 .title-bar {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
 }
 
 .title-bar li {
     display: inline-block;
     margin-right: 1rem;
+    margin-bottom: 0;
     /*float: left;*/
 }
 
@@ -60,6 +63,7 @@ nav {
     color: white;
     text-align: center;
     padding: 14px 16px;
+    margin-bottom: 0;
     text-decoration: none;
 }
 
