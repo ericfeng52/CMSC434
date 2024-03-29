@@ -1,7 +1,5 @@
 .content {
     font-size: large;
-    height: 570px;
-    width: 320px;
     background-color: gray;
     padding-bottom: 25px;
     padding-left: 15px;
@@ -53,6 +51,8 @@
 
 body {
     margin: 0;
+    height: 570px;
+    width: 320px;
     font-family: Arial, sans-serif;
 }
 
