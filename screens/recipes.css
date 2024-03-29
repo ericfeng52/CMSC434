@@ -7,6 +7,19 @@
     padding-top: 0rem;
 }
 
+#ingredients-input {
+    height: 10rem;
+    width: fit-content;
+}
+
+#supplies-input {
+    height: 10rem;
+    width: fit-content;
+}
+#supplies-input {
+    height: 10rem;
+    width: fit-content;
+}
 
 #todo_header {
     text-align: left;
@@ -17,7 +30,7 @@
     display: flex;
     align-items: center;
     background-color: lightgrey;
-    width:fit-content
+    width:fit-content;
 }
 .task input[type="checkbox"] {
     margin-right: 10px;
