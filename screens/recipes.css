@@ -60,6 +60,7 @@ nav {
     background-color: #333;
     text-align: center;
     margin: 0;
+    width: auto;
 }
 
 .title-bar {
