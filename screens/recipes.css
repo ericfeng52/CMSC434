@@ -1,5 +1,7 @@
 .content {
     font-size: large;
+    height: 570px;
+    width: 320px;
     background-color: gray;
     padding-bottom: 25px;
     padding-left: 15px;
