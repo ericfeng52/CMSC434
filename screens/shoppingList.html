@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="shoppingList.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to handle adding an item to the shopping list
+            function addItem(category) {
+                // Prompt user to enter item name
+                var itemName = prompt("Enter the name of the item:");
+
+                // Check if item name is not empty and user didn't cancel
+                if (itemName !== null && itemName !== "") {
+                    // Find the corresponding section based on the selected category
+                    var section = document.getElementById(category);
+
+                    // Check if the selected category section exists
+                    if (section) {
+                        // Create a new list item
+                        var listItem = document.createElement("li");
+                        listItem.textContent = itemName + "    ";
+
+                        // Create a delete button for the list item
+                        var deleteButton = document.createElement("button");
+                        deleteButton.textContent = "X";
+                        deleteButton.classList.add("delete-button");
+
+                        // Append the delete button to the list item
+                        listItem.appendChild(deleteButton);
+
+                        // Append the new item to the corresponding category section
+                        section.appendChild(listItem);
+
+                        // Add event listener to the delete button to remove the item when clicked
+                        deleteButton.addEventListener("click", function() {
+                            listItem.remove();
+                            updateItemCounter(); // Update item counter after deletion
+                        });
+
+                        updateItemCounter(); // Update item counter after addition
+                    } else {
+                        alert("Invalid category! Please select a valid category.");
+                    }
+                }
+            }
+
+            // Add event listener to the category buttons
+            var categoryButtons = document.querySelectorAll(".category-button");
+            categoryButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    var category = button.getAttribute("data-category");
+                    addItem(category);
+                });
+            });
+
+            function updateItemCounter() {
+            // Get all sections
+            var sections = document.querySelectorAll(".shopping-list-container section");
+
+            // Initialize total item count
+            var totalItems = 0;
+
+            // Loop through each section and count items
+            sections.forEach(function(section) {
+                totalItems += section.querySelectorAll("li").length;
+            });
+
+            // Display item count in the item-counter element
+            var itemCounter = document.getElementById("item-counter");
+            itemCounter.textContent = "Total Items: " + totalItems;
+        }
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="title-bar">
+            <li><a href="../index.html">
+                <box-icon name='home'></box-icon>
+            </a></li>
+
+            <li><a href="inventory.html">
+                <box-icon name="fridge" class="main-icon"></box-icon>
+            </a></li>
+
+            <li><a href="shoppingList.html">
+                <box-icon name="shopping-bag" class="main-icon"></box-icon>
+            </a></li>
+           
+            <li><a href="recipes.html">
+                <box-icon name="food-menu" class="main-icon"></box-icon>
+            </a></li>
+
+            <li><a href="profile.html">
+                <box-icon name="user" class="main-icon"></box-icon>
+            </a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="shopping-list-container">
+            <div class = "title-and-buttons">
+                <h1 id="choices_header" class="center">Shopping List</h1>
+                <!--<button class="center" id="add-item-button">Add Item</button>-->
+                
+                <!-- Buttons to select food category -->
+                <div id="category-buttons" class="center">
+                    <button class="category-button" data-category="meat">Meat</button>
+                    <button class="category-button" data-category="produce">Produce</button>
+                    <button class="category-button" data-category="dairy">Dairy</button>
+                    <button class="category-button" data-category="seasonings">Seasonings</button>
+                    <button class="category-button" data-category="other">Other</button>
+                </div>
+            </div>
+
+            <section id="meat">
+                <div class="section-wrapper">
+                    <h2>&nbsp;&nbsp;Meat&nbsp;&nbsp;</h2>
+                </div>
+            </section>
+            
+            <section id="produce">
+                <div class="section-wrapper">
+                    <h2>&nbsp;&nbsp;Produce&nbsp;&nbsp;</h2>
+                </div>
+            </section>
+            
+            <section id="dairy">
+                <div class="section-wrapper">
+                    <h2>&nbsp;&nbsp;Dairy&nbsp;&nbsp;</h2>
+                </div>
+            </section>
+            
+            <section id="seasonings">
+                <div class="section-wrapper">
+                    <h2>&nbsp;&nbsp;Seasonings&nbsp;&nbsp;</h2>
+                </div>
+            </section>
+            
+            <section id="other">
+                <div class="section-wrapper">
+                    <h2>&nbsp;&nbsp;Other&nbsp;&nbsp;</h2>
+                </div>
+            </section>
+
+            <div id="item-counter" class="center"></div>
+
+        </div>
+    </div>
+</body>
+</html>

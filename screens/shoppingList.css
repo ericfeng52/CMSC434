@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eae2b7; /* Set background color for the entire page */
+}
+
+.content {
+    font-size: large;
+    padding: 2rem; /* Combine duplicate declaration */
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+}
+
+.title-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.title-bar li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.title-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.title-bar li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.shopping-list-container {
+    text-align: left; /* Align text to the left */
+}
+
+.title-and-buttons {
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.shopping-list-container h1 {
+    border: 2px solid #fff; /* Solid white rectangle around the heading */
+    border-radius: 10px; /* Rounded edges */
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 20px; /* Add bottom margin to create space */
+}
+
+.shopping-list-container button {
+    margin-top: 0px;
+    background-color: #FCBF49; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px; /* Button rounded edges */
+}
+
+.shopping-list-container button:hover {
+    background-color: #F77F00; /* Darker background color on hover */
+}
+
+.shopping-list-container h2 {
+    color: #003049; /* Change label color to dark blue */
+    border: 2px solid #fff; /* Solid white rectangle around the heading */
+    /*border-radius: 10px;  Rounded edges */
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: inline-block; /* Display as inline block to wrap the text */
+    margin-bottom: 10px; /* Add bottom margin to create space */
+    margin-left: 0; /* Align to the left */
+    margin-right: auto; /* Align to the right */
+    width: 100%; /* Span the entire width */
+}
+
+/* Style list items within shopping list sections */
+.shopping-list-container section li {
+    list-style-type: none; 
+    color: #003049; 
+    margin-top: 5px;
+    border: 2px solid #b7d49a; 
+    background-color: #b7d49a; 
+    border-radius: 5px; /* Add border radius for rounded corners */
+    padding: 0px 5px; /* Add padding to create space between text and border */
+    display: inline-block; /* Make list items display inline-block */
+    margin-right: 10px; /* Add right margin to separate list items */
+}
+
+/* Style for item counter */
+#item-counter {
+    color: #003049; /* Dark blue text color */
+    padding: 5px 10px; /* Padding */
+    display: inline-block; /* Make it inline block */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.title-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center; /* Add this line to center the items */
+    background: white
+}
+
+.title-bar li {
+    display: inline-block;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}

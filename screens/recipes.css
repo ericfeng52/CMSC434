@@ -1,0 +1,73 @@
+.content {
+    font-size: large;
+    background-color: lightpink;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    margin-top: 0rem;
+    padding-top: 0rem;
+}
+
+
+#todo_header {
+    text-align: left;
+    margin-top: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background-color: lightgrey;
+    width:fit-content
+}
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+.task .delete-button {
+    font-weight:100;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.task .delete-button:hover {
+    color: red;
+}
+.task.completed {
+    text-decoration: line-through;
+    background-color: darkgrey;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+.title-bar {
+    list-style-type: none;
+    margin: 0;
+}
+
+.title-bar li {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    /*float: left;*/
+}
+
+.title-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.title-bar li a:hover {
+    background-color: #ddd;
+    color: black;
+}

@@ -1,0 +1,47 @@
+body {
+    background-color: #eae2b7;
+    color: #003049; /*text color*/ 
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.header {
+    background-color: white;
+    border-radius: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 175px;
+    width: 175px; 
+    background-color: #ffffff; 
+    border: #003049 1px solid;
+    border-radius: 50%; /* To make it circular if needed */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px;
+}
+
+.main-icon {
+    height: 100px;
+    width: 100px;
+}
+
+.all-icons {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#app-header {
+    font-size: 3rem;
+}

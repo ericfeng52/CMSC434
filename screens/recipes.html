@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes</title>
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+    <nav>
+        <ul class="title-bar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="shoppingList.html">Shopping List</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="untitled2.html">Untitled</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1 id="todo_header">Recipes</h1>
+        <div>
+            <input type="text" id="task-input" placeholder="Enter task">
+            <button id="add-button">Add</button>
+        </div>
+        <ul id="todo-list">
+            <!-- todo items here -->
+        </ul>
+    </div>
+    
+    <script>
+        const taskInput = document.getElementById('task-input');
+        const addButton = document.getElementById('add-button');
+        const todoList = document.getElementById('todo-list');
+
+        addButton.addEventListener('click', () => {
+            const taskText = taskInput.value.trim();
+            if (taskText !== '') {
+                const taskItem = document.createElement('li');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                const taskTextElement = document.createElement('span');
+                taskTextElement.textContent = taskText;
+                const deleteButton = document.createElement('span');
+                deleteButton.textContent = 'x';
+                deleteButton.className = 'delete-button';
+
+                taskItem.className = 'task';
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(taskTextElement);
+                taskItem.appendChild(deleteButton);
+
+                todoList.appendChild(taskItem);
+
+                taskInput.value = '';
+            }
+        });
+
+        todoList.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.classList.contains('delete-button')) {
+                const taskItem = target.parentNode;
+                todoList.removeChild(taskItem);
+            } else if (target.type === 'checkbox') {
+                const taskItem = target.parentNode;
+                taskItem.classList.toggle('completed');
+            }
+        });
+    </script>
+</body>
+</html>
